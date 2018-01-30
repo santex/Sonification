@@ -21,14 +21,14 @@ Title
 </style>
 
 <!-- WebGL stuff -->
-<script src="http://santex.github.io/Sonification/visualizer-gl/o3djs/base.js"></script>
-<script src="http://santex.github.io/Sonification/visualizer-gl/cameracontroller.js"></script>
+<script src="visualizer-gl/o3djs/base.js"></script>
+<script src="visualizer-gl/cameracontroller.js"></script>
 
 <!-- TODO(kbr): remove this dependency -->
-<script src="http://santex.github.io/Sonification/visualizer-gl/moz/matrix4x4.js"></script>
+<script src="visualizer-gl/moz/matrix4x4.js"></script>
 
 <!-- Visualizer GL library -->
-<script type="http://santex.github.io/Sonification/text/javascript" src="visualizer-gl/visualizer.js"></script>
+<script type="text/javascript" src="visualizer-gl/visualizer.js"></script>
 
 <!-- Our javascript code -->
 <script type="text/javascript">
@@ -58,7 +58,7 @@ function error() {
 
 function getUserMedia(dictionary, callback) {
     try {
-        navigator.webkitGetUserMedia(dictionary, callback, error);
+        navigator.getUserMedia(dictionary, callback, error);
     } catch (e) {
         alert('webkitGetUserMedia threw exception :' + e);
         finishJSTest();
